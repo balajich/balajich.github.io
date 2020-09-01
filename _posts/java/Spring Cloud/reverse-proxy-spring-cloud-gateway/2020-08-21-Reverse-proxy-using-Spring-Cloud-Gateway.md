@@ -6,7 +6,7 @@ In this tutorial we are going to a run reverse proxy that is going to server req
 - Run reverse proxy (Spring Cloud Gateway Netty) on 8080 port
 - Run rest api (tomcat) on 9090 port
 - Modify the configurations of Netty to route requests to a newly added tomcat that is running on 9091
-- How to handle tomcat failovers
+- How to handle tomcat fail overs
 # Source Code
     git clone https://github.com/balajich/reverse-proxy-spring-cloud-gateway.git
 # Architecture
@@ -36,10 +36,12 @@ Access rest api directly.
 
 # Run api server on 9091 port
      java '-Dserver.port=9091' -jar .\restapi\target\restapi-0.0.1-SNAPSHOT.jar
+     
 # Assignment
 - Enhance gateway to route requests to tomcat running on 9091
 - Observe requests are served in round robin fashion by the two servers running on 9090 and 9091
 - Enhance gateway application to route requests to only healthy tomcats
+
 # Solutions
 Please refer next tutorial
     
